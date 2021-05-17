@@ -70,7 +70,11 @@ def callback():
         print('get', event.message.text)
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.message.text+'a')
+            TextSendMessage(text=event.message.text)
+        )
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=event.message.text+'abc')
         )
 
     return 'OK' # 回覆傳輸狀況 OK == 200
