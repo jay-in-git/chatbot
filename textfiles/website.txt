@@ -1,0 +1,3 @@
+個人網站：
+採用 C++ 作為主要架構，python為輔助，建立了一個支援多人連線、影片串流、Cookie 登入等功能的個人網站。
+連結： https://github.com/jay-in-git/Personal-Website

@@ -1,0 +1,109 @@
+{
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://imgur.com/VYmSml9.png",
+      "size": "full",
+      "aspectRatio": "21:13",
+      "aspectMode": "cover",
+      "action": {
+        "type": "uri",
+        "uri": "http://linecorp.com/"
+      },
+      "animated": true,
+      "margin": "none",
+      "position": "relative"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "選個感興趣的主題吧！",
+          "weight": "bold",
+          "size": "xl",
+          "style": "normal",
+          "position": "relative",
+          "align": "center"
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "總覽",
+                "text": "total"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "推薦系統",
+                "text": "recommend"
+              },
+              "margin": "none"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "個人網站",
+                "text": "website"
+              }
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "機器學習",
+                "text": "ML"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "遊戲",
+                "text": "game"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "聊天機器人",
+                "text": "chatbot"
+              }
+            }
+          ]
+        }
+      ],
+      "flex": 0
+    },
+    "styles": {
+      "body": {
+        "backgroundColor": "#F0F0F0"
+      },
+      "footer": {
+        "backgroundColor": "#E0E0E0"
+      }
+    }
+  }

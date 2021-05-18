@@ -1,0 +1,5 @@
+推薦系統：
+採用 matrix factorization 的方式，將使用者對物品的喜好度（0或1）矩陣假設為兩個 Embedding 矩陣，並利用梯度下降法尋找損失函數最小的點。
+其中損失函數採用 Bayesian personalized ranking 的方式，概念為同一個使用者若喜歡 i 物品而 j 不喜歡物品，其對於物品 i 的分數應該要遠大於 j。
+獲得 kaggle 排名第 5。
+連結： https://github.com/jay-in-git/MF_IR

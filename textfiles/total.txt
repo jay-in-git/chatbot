@@ -1,0 +1,20 @@
+推薦系統：
+採用 matrix factorization 的方式，將使用者對物品的喜好度（0或1）矩陣假設為兩個 Embedding 矩陣，並利用梯度下降法尋找損失函數最小的點。
+其中損失函數採用 Bayesian personalized ranking 的方式，概念為同一個使用者若喜歡 i 物品而 j 不喜歡物品，其對於物品 i 的分數應該要遠大於 j。
+獲得 kaggle 排名第 5。
+連結： https://github.com/jay-in-git/MF_IR
+
+個人網站：
+採用 C++ 作為主要架構，python為輔助，建立了一個支援多人連線、影片串流、Cookie 登入等功能的個人網站。
+連結： https://github.com/jay-in-git/Personal-Website
+
+機器學習：
+利用 pytorch 實作過課堂作業的 DNN、CNN、Transformer、seq2seq、GAN 等模型。
+
+機器人遊戲：
+用 pygame 為台大資訊營寫的小遊戲，能讓四個玩家同時對戰。用 MVC 架構開發，其中我負責介面模組、部分機器人模組，和最終魔王的編寫。
+連結： https://github.com/jay-in-git/challenge2019
+
+聊天機器人：
+用 python 開發一個會推銷我的 LINE chatbot，使用 Message、Template、Flex message 等功能，讓聊天機器人的介面更豐富。
+連結： https://github.com/jay-in-git/chatbot/

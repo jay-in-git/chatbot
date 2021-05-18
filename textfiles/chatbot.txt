@@ -1,0 +1,3 @@
+聊天機器人：
+用 python 開發一個會推銷我的 LINE chatbot，使用 Message、Template、Flex message 等功能，讓聊天機器人的介面更豐富。
+連結： https://github.com/jay-in-git/chatbot/
