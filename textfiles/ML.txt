@@ -1,2 +1,3 @@
 機器學習：
 利用 pytorch 實作過課堂作業的 DNN、CNN、Transformer、seq2seq、GAN 等模型。
+因檔案過多所以沒有整理上傳至 github，但本機這裡仍有資料！
