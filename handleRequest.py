@@ -5,53 +5,47 @@ from linebot.models import (
 from linebot.models import (
     TemplateSendMessage, CarouselTemplate, CarouselColumn, PostbackTemplateAction, MessageTemplateAction, URITemplateAction
 )
+from linebot.models import (
+    FlexSendMessage
+)
+import json
 
 def handleFollow():
+    num_block = 2
+    urls = ['https://imgur.com/P9CHBgP.png', 'https://imgur.com/vUZhiXQ.png']
+    titles = ['Profile', 'Projects']
+    texts = ['The resume and introduction of Jay', 'The side projects and course projects of Jay.']
+    message_acts = [{'label': 'View Introduction', 'text': 'Introduction'}, {'label': 'View all Projects', 'text': 'Projects'}]
+    uri_acts = [{'label': 'Resume, Transcript', 'uri': 'https://drive.google.com/drive/folders/1BU3uA-FH03rizBMvLScJcq6ThwVni6l8?usp=sharing'}, {'label': 'Github Link', 'uri': 'https://github.com/jay-in-git'}]
     message = TemplateSendMessage(
             alt_text='Action List', 
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://imgur.com/P9CHBgP.png',
-                        title='Profile',
-                        text='The resume and introduction of Jay',
+                        thumbnail_image_url=urls[i],
+                        title=titles[i],
+                        text=texts[i],
                         actions=[
                             MessageTemplateAction(
-                                label='View Introduction',
-                                text='Introduction'
+                                label=message_acts[i]['label'],
+                                text=message_acts[i]['text']
                             ),
                             URITemplateAction(
-                                label='Resume, Transcript',
-                                uri='https://drive.google.com/drive/folders/1BU3uA-FH03rizBMvLScJcq6ThwVni6l8?usp=sharing'
+                                label=uri_acts[i]['label'],
+                                uri=uri_acts[i]['uri']
                             )
                         ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://imgur.com/vUZhiXQ.png',
-                        title='Projects',
-                        text='The side projects and course projects of Jay.',
-                        actions=[
-                            MessageTemplateAction(
-                                label='View all Projects',
-                                text='Projects'
-                            ),
-                            URITemplateAction(
-                                label='Github Link',
-                                uri='https://github.com/jay-in-git'
-                            )
-                        ]
-                    ),
-                ]
+                    ) for i in range(num_block) ]
             )
         )
     return message
 
 def handleText(text):
     if text == 'Introduction':
-        with open('introduction.txt') as f:
-            message = TextSendMessage(text=''.join(f.readlines()))
+        message = FlexSendMessage('Menu', json.load(open('introMenu.json','r',encoding='utf-8')))
     elif text == 'Projects':
-        
+        print('preparing')
+    return message
 def getResponse(event=None):
     if isinstance(event, FollowEvent):
         message = handleFollow()

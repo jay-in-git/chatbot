@@ -1,0 +1,108 @@
+{
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://imgur.com/eMc7Bc7.png",
+      "size": "full",
+      "aspectRatio": "33:13",
+      "aspectMode": "fit",
+      "action": {
+        "type": "uri",
+        "uri": "http://linecorp.com/"
+      },
+      "animated": true,
+      "margin": "none"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "選個感興趣的主題吧！",
+          "weight": "bold",
+          "size": "xl",
+          "style": "normal",
+          "position": "relative",
+          "align": "center"
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "總覽",
+                "text": "full"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "特質",
+                "text": "character"
+              },
+              "margin": "none"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "經驗",
+                "text": "experience"
+              }
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "個性",
+                "text": "personality"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "興趣",
+                "text": "interests"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "展望",
+                "text": "forward"
+              }
+            }
+          ]
+        }
+      ],
+      "flex": 0
+    },
+    "styles": {
+      "body": {
+        "backgroundColor": "#F0F0F0"
+      },
+      "footer": {
+        "backgroundColor": "#E0E0E0"
+      }
+    }
+  }
