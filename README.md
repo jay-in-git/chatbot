@@ -1,6 +1,11 @@
 # Chatbot
 A LINE chatbot that promotes myself.
 
+QRcode:
+
+![](./qrcode.png)
+
+Notice that the chatbot might need time to be waken 
 ### Build on Heroku
 The setting of Heroku and LINE interface is clear in the document of LINE website. This part is mainly focus on how to modify a sample chatbot on Heroku.
 1. Follow the guideline https://developers.line.biz/en/docs/messaging-api/building-sample-bot-with-heroku/#deploy-the-kitchensink-sample-bot-app to setup a simple chatbot that only repeat what you've say. 
@@ -32,3 +37,4 @@ The setting of Heroku and LINE interface is clear in the document of LINE websit
  
  ---
 ### Features
+
