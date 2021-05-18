@@ -37,4 +37,9 @@ The setting of Heroku and LINE interface is clear in the document of LINE websit
  
  ---
 ### Features
-
+使用 Message, Template, Flex Message 等模板，讓使用這可以透過按鍵互動來取得資料，不用花時間打字。
+使用方式：
+        - 加入機器人 jay 為好友，會跳出選單，可以取得想知道的資訊。若無選單可打 profile 取得，打小寫不拘。
+        - 點擊每個資訊按鈕後會傳送文字訊息給 jay，若想直接打字跟 jay 取資訊也可以，要注意大小寫。
+        - 用 jay 來了解 jay 吧！
+Code 經過初步的 refactor，未來若想添加新的介面會更加方便！
