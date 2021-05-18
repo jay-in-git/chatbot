@@ -45,6 +45,12 @@ def handleText(text):
         message = FlexSendMessage('Menu', json.load(open('introMenu.json','r',encoding='utf-8')))
     elif text == 'Projects':
         print('preparing')
+    else:
+        try:
+            with open(f'textfiles/{text}.txt') as file:
+                message = TextSendMessage(text=''.join(file.readlines()))
+        except:
+            message = TextSendMessage(text='Click the blocks above to get the information!')
     return message
 def getResponse(event=None):
     if isinstance(event, FollowEvent):
