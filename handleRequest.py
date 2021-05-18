@@ -45,14 +45,14 @@ def handleText(text):
         message = FlexSendMessage('Menu', json.load(open('flex/introMenu.json','r',encoding='utf-8')))
     elif text == 'Projects':
         message = FlexSendMessage('Menu', json.load(open('flex/projMenu.json','r',encoding='utf-8')))
-    elif text == 'prefile':
+    elif text.lower() == 'profile':
         message = handleFollow()
     else:
         try:
             with open(f'textfiles/{text}.txt') as file:
                 message = TextSendMessage(text=''.join(file.readlines()))
         except:
-            message = TextSendMessage(text='Click the blocks above to get informations, or type \'profile\' to get the blocks!')
+            message = TextSendMessage(text='Click the blocks above to get informations, or type \'Profile\' to get the blocks!')
     return message
 def getResponse(event=None):
     if isinstance(event, FollowEvent):
@@ -60,5 +60,5 @@ def getResponse(event=None):
     elif isinstance(event, MessageEvent) and isinstance(event.message, TextMessage):
         message = handleText(event.message.text)
     else:
-        message = TextSendMessage(text='Click the blocks above to get informations, or type \'profile\' to get the blocks!')
+        message = TextSendMessage(text='Click the blocks above to get informations, or type \'Profile\' to get the blocks!')
     return message
