@@ -5,7 +5,9 @@ QRcode:
 
 ![](./qrcode.png)
 
-Notice that the chatbot might need time to be waken because Heroku will sleep automatically.(I didn't force Heroku to wake up because the there's limited time per month)
+Notice:
+1. The chatbot might need time to be waken because Heroku will sleep automatically.(I didn't force Heroku to wake up because the there's limited time per month)
+2. **Test the chatbot using mobile devices please, so that the full message can be shown.**
 ### Build on Heroku
 The setting of Heroku and LINE interface is clear in the document of LINE website. This part is mainly focus on how to modify a sample chatbot on Heroku.
 1. Follow the guideline https://developers.line.biz/en/docs/messaging-api/building-sample-bot-with-heroku/#deploy-the-kitchensink-sample-bot-app to setup a simple chatbot that only repeat what you've say. 
