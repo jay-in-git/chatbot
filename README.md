@@ -5,7 +5,7 @@ QRcode:
 
 ![](./qrcode.png)
 
-Notice that the chatbot might need time to be waken 
+Notice that the chatbot might need time to be waken because Heroku will sleep automatically.(I didn't force Heroku to wake up because the there's limited time per month)
 ### Build on Heroku
 The setting of Heroku and LINE interface is clear in the document of LINE website. This part is mainly focus on how to modify a sample chatbot on Heroku.
 1. Follow the guideline https://developers.line.biz/en/docs/messaging-api/building-sample-bot-with-heroku/#deploy-the-kitchensink-sample-bot-app to setup a simple chatbot that only repeat what you've say. 
@@ -38,8 +38,10 @@ The setting of Heroku and LINE interface is clear in the document of LINE websit
  ---
 ### Features
 使用 Message, Template, Flex Message 等模板，讓使用這可以透過按鍵互動來取得資料，不用花時間打字。
+
 使用方式：
-        - 加入機器人 jay 為好友，會跳出選單，可以取得想知道的資訊。若無選單可打 profile 取得，打小寫不拘。
-        - 點擊每個資訊按鈕後會傳送文字訊息給 jay，若想直接打字跟 jay 取資訊也可以，要注意大小寫。
-        - 用 jay 來了解 jay 吧！
+- 加入機器人 jay 為好友，會跳出選單，可以取得想知道的資訊。若無選單可打 profile 取得，大小寫不拘。
+- 點擊每個資訊按鈕後會傳送文字訊息給 jay，若想直接打字跟 jay 取資訊也可以，要注意大小寫。
+- 用 jay 來了解 jay 吧！
+        
 Code 經過初步的 refactor，未來若想添加新的介面會更加方便！
