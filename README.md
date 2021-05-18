@@ -23,6 +23,12 @@ The setting of Heroku and LINE interface is clear in the document of LINE websit
     git push <heroku / origin>
     ```
     The server should run without error!
+    
  ---
+### Test on local
+1. `ngrox http <port num>`
+2. Copy the https url to LINE webhook url. Remember to add '/callback'.
+3. `python app.py --port <port num>` port number should be the same as the one in 1.
  
+ ---
 ### Features
